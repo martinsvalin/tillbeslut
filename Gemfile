@@ -19,3 +19,8 @@ group :development, :test do
   gem "capybara"
   gem "rspec-rails"
 end
+
+group :development do
+  gem "guard"
+  gem "guard-rspec"
+end
