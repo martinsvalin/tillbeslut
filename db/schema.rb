@@ -21,4 +21,7 @@ ActiveRecord::Schema.define(:version => 20120714195709) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "proposals", ["header"], :name => "index_proposals_on_header"
+  add_index "proposals", ["number"], :name => "index_proposals_on_number", :unique => true
+
 end
