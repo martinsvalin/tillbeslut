@@ -10,4 +10,11 @@ describe "proposals index page" do
     visit '/motioner'
     page.should have_css('body')
   end
+
+  context "with no proposals" do
+    before { visit '/proposals' }
+    it "tells us there are no proposals" do
+      page.should have_content('Inga motioner')
+    end
+  end
 end
