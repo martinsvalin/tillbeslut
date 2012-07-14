@@ -16,6 +16,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'nokogiri'
   gem "capybara"
   gem "rspec-rails"
   gem "factory_girl"
