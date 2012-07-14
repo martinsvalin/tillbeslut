@@ -1,12 +1,6 @@
-require 'spec_helper'
+require 'action_controller'
+require_relative '../../app/controllers/application_controller'
+require_relative '../../app/controllers/proposals_controller'
 
 describe ProposalsController do
-
-  describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
-    end
-  end
-
 end
