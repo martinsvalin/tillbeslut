@@ -4,7 +4,7 @@ require_relative '../../app/controllers/proposals_controller'
 
 describe ProposalsController do
   let(:controller) { ProposalsController.new }
-  before(:all) { Proposal = Class.new unless defined? Proposal }
+  before(:all) { Proposal ||= Class.new }
 
   describe 'index' do
     it "asks for all the proposals" do
