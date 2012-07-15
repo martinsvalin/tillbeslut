@@ -21,6 +21,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_girl"
   gem "pry"
+  gem 'spork', '~> 1.0rc'
 end
 
 group :development do
