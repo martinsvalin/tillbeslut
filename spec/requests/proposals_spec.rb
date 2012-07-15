@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe "proposals index page" do
-  it "can be reached" do
+  it "can be reached at /motioner" do
     visit '/motioner'
     page.should have_content('Motioner')
   end
 
-  it "can be reached" do
+  it "can be reached at /proposals" do
     visit '/proposals'
     page.should have_content('Motioner')
   end
@@ -28,6 +28,7 @@ describe "proposals index page" do
     it "shows a numbered list of proposals" do
       page.should have_content('Motion 1.1')
       page.should have_content('Motion 1.2')
+      page.should_not have_content('Inga motioner')
     end
   end
 end
