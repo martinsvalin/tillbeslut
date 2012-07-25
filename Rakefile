@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Votering::Application.load_tasks
+TillBeslut::Application.load_tasks
