@@ -22,10 +22,8 @@ ActiveRecord::Schema.define(:version => 20120801154500) do
   add_index "authors", ["name"], :name => "index_authors_on_name"
 
   create_table "authors_proposals", :force => true do |t|
-    t.integer  "author_id"
-    t.integer  "proposal_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer "author_id"
+    t.integer "proposal_id"
   end
 
   add_index "authors_proposals", ["author_id"], :name => "index_authors_proposals_on_author_id"

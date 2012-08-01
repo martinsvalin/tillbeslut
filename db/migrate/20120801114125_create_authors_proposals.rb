@@ -3,7 +3,6 @@ class CreateAuthorsProposals < ActiveRecord::Migration
     create_table :authors_proposals do |t|
       t.integer :author_id
       t.integer :proposal_id
-      t.timestamps
     end
 
     add_index :authors_proposals, :author_id
