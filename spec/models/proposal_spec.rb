@@ -26,9 +26,14 @@ describe Proposal do
     end
   end
 
-  it "has a list of authors" do
+  it "must have a list of authors" do
+    proposal.authors = []
+    proposal.should_not be_valid
+    proposal.errors.added?(:authors, :blank).should be_present
+
     proposal.authors << author
-    proposal.authors.should eq [author]
+    proposal.valid?
+    proposal.errors[:authors].should be_blank
   end
 
   it "must have a list of decision points" do
