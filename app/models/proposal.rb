@@ -6,4 +6,5 @@ class Proposal < ActiveRecord::Base
 
   validates :header, presence: true
   validates :number, presence: true, uniqueness: true
+  validates :decision_points, presence: true
 end
