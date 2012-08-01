@@ -1,7 +1,4 @@
-require_relative '../support/fast_spec_helper'
-include FastSpecHelper
-require_active_record
-require_relative '../../app/models/proposal'
+require 'spec_helper'
 
 describe Proposal do
   it "requires a header" do
