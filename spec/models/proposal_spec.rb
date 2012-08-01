@@ -33,7 +33,7 @@ describe Proposal do
 
     proposal.authors << author
     proposal.valid?
-    proposal.errors[:authors].should be_blank
+    proposal.errors.added?(:authors, :blank).should_not be_present
   end
 
   it "must have a list of decision points" do
@@ -43,6 +43,6 @@ describe Proposal do
 
     proposal.decision_points << decision_point
     proposal.valid?
-    proposal.errors[:decision_points].should be_blank
+    proposal.errors.added?(:decision_points, :blank).should_not be_present
   end
 end

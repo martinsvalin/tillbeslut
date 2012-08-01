@@ -13,7 +13,7 @@ FactoryGirl.define do
     body   "Open data has come of age. Government data should be open for reasons of transparency, entrepreneurship and efficiency."
     after(:build) do |proposal|
       proposal.authors << FactoryGirl.build(:author)
-      proposal.decision_points << FactoryGirl.build(:decision_point)
+      proposal.decision_points << FactoryGirl.build(:decision_point, proposal: proposal)
     end
   end
 end
