@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801114125) do
+ActiveRecord::Schema.define(:version => 20120801154500) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(:version => 20120801114125) do
 
   add_index "authors_proposals", ["author_id"], :name => "index_authors_proposals_on_author_id"
   add_index "authors_proposals", ["proposal_id"], :name => "index_authors_proposals_on_proposal_id"
+
+  create_table "decision_points", :force => true do |t|
+    t.string   "text"
+    t.integer  "proposal_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "decision_points", ["proposal_id"], :name => "index_decision_points_on_proposal_id"
 
   create_table "proposals", :force => true do |t|
     t.string   "header",     :null => false

@@ -27,9 +27,15 @@ describe Proposal do
 
   it "should have authors" do
     p = Proposal.new
-    p.authors.should eq []
     author = Author.new
     p.authors << author
     p.authors.should eq [author]
+  end
+
+  it "should have decision points (att-satser)" do
+    p = Proposal.new
+    decision_point = DecisionPoint.new
+    p.decision_points << decision_point
+    p.decision_points.should eq [decision_point]
   end
 end
