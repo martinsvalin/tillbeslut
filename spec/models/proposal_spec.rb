@@ -14,13 +14,22 @@ describe Proposal do
   end
 
   context "with another numbered proposal" do
-    before { Proposal.create header: 'Yep', number: '1.1' }
+    let(:existing_number) { '1.1' }
+    before { Proposal.create header: 'Yep', number: existing_number }
     after { Proposal.delete_all }
 
     it "needs a unique number" do
-      proposal = Proposal.new number: '1.1'
+      proposal = Proposal.new number: existing_number
       proposal.valid?
       proposal.errors[:number].should_not be_blank
     end
+  end
+
+  it "should have authors" do
+    p = Proposal.new
+    p.authors.should eq []
+    author = Author.new
+    p.authors << author
+    p.authors.should eq [author]
   end
 end

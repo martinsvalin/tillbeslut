@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120714195709) do
+ActiveRecord::Schema.define(:version => 20120801114125) do
+
+  create_table "authors", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "authors", ["name"], :name => "index_authors_on_name"
+
+  create_table "authors_proposals", :force => true do |t|
+    t.integer  "author_id"
+    t.integer  "proposal_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "authors_proposals", ["author_id"], :name => "index_authors_proposals_on_author_id"
+  add_index "authors_proposals", ["proposal_id"], :name => "index_authors_proposals_on_proposal_id"
 
   create_table "proposals", :force => true do |t|
     t.string   "header",     :null => false
