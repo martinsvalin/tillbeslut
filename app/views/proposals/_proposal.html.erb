@@ -1,3 +1,10 @@
 <li>
-    Motion <%= proposal.number %>
+    <article>
+        <h1><%= proposal.number %> <%= proposal.header %></h1>
+        <p><%= proposal.authors.map(&:name).join ', ' %></p>
+        <p><%= proposal.body %></p>
+        <ol>
+            <%= render proposal.decision_points %>
+        </ol>
+    </article>
 </li>

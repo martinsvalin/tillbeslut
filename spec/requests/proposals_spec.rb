@@ -20,14 +20,14 @@ describe "proposals index page" do
 
   context "with a couple of proposals" do
     before do
-      FactoryGirl.create(:proposal, number: '1.1')
-      FactoryGirl.create(:proposal, number: '1.2')
+      FactoryGirl.create(:proposal, number: '1.1', header: 'Open data')
+      FactoryGirl.create(:proposal, number: '1.2', header: '30h work week')
       visit '/proposals'
     end
 
     it "shows a numbered list of proposals" do
-      page.should have_content('Motion 1.1')
-      page.should have_content('Motion 1.2')
+      page.should have_content('1.1 Open data')
+      page.should have_content('1.2 30h work week')
       page.should_not have_content('Inga motioner')
     end
   end
