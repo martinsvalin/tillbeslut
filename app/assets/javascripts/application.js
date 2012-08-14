@@ -19,4 +19,4 @@
 //= require_self
 //= require till_beslut
 
-TillBeslut = Ember.Application.create();
+window.TillBeslut = Ember.Application.create();
