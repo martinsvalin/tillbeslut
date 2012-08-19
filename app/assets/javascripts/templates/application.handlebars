@@ -1,5 +1,11 @@
-<h1>Application</h1>
+<h1>Motioner</h1>
 
-<p>Your content here.</p>
+<ul>
+  <li>
+    {{#with TillBeslut.Proposal}}
+    {{view TillBeslut.ProposalView}}
+    {{/with}}
+  </li>
+</ul>
 
 {{outlet}}
