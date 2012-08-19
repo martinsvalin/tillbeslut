@@ -1,5 +1,6 @@
 <h1>Motioner</h1>
 
+{{#if TillBeslut.Proposal}}
 <ul>
   <li>
     {{#with TillBeslut.Proposal}}
@@ -7,5 +8,8 @@
     {{/with}}
   </li>
 </ul>
+{{else}}
+<p>Inga motioner.</p>
+{{/if}}
 
 {{outlet}}
