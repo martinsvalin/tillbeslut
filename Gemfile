@@ -28,5 +28,5 @@ group :development do
   gem "guard"
   gem "guard-rspec"
   gem 'guard-spork'
-  gem "ruby_gntp"
+  gem 'rspec-nc'
 end
