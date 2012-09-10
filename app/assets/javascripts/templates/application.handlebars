@@ -1,15 +1,3 @@
 <h1>Motioner</h1>
 
-{{#if TillBeslut.Proposal}}
-<ul>
-  <li>
-    {{#with TillBeslut.Proposal}}
-    {{view TillBeslut.ProposalView}}
-    {{/with}}
-  </li>
-</ul>
-{{else}}
-<p>Inga motioner.</p>
-{{/if}}
-
-{{outlet}}
+{{ outlet }}

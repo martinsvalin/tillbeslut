@@ -1,0 +1,1 @@
+TillBeslut.ProposalsController = Ember.Controller.extend()

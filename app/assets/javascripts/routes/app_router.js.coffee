@@ -5,5 +5,5 @@ TillBeslut.Router = Ember.Router.extend
     index: Ember.Route.extend
       route: '/'
 
-      # connectOutlets: (router)->
-      #   router.get('applicationController').connectOutlet(TillBeslut.ApplicationView)
+      connectOutlets: (router)->
+        router.get('applicationController').connectOutlet('proposals', TillBeslut.Proposals)
