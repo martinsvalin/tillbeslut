@@ -1,9 +1,14 @@
+//= require jquery
+//= require jquery_ujs
+//= #require twitter/bootstrap
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require create_ember_app
 //= require_tree ./models
 //= require_tree ./controllers
 //= require_tree ./views
 //= require_tree ./helpers
 //= require_tree ./templates
 //= require_tree ./routes
-//= require_self
-
-TillBeslut.initialize();
+//= require initialize_ember_app
