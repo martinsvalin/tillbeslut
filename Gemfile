@@ -22,6 +22,7 @@ group :development, :test do
   gem "capybara-webkit"
   gem "rspec-rails"
   gem "factory_girl"
+  gem "database_cleaner"
   gem "pry"
   gem 'spork', '~> 1.0rc'
 end
