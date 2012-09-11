@@ -1,4 +1,5 @@
-TillBeslut.Proposal = Ember.Object.reopenClass
+TillBeslut.Proposal = Ember.Object.extend()
+TillBeslut.Proposal.reopenClass
   allProposals: []
   all: ->
     $.ajax
@@ -7,4 +8,3 @@ TillBeslut.Proposal = Ember.Object.reopenClass
       success: (response)=>
         @allProposals.addObject proposal.proposal for proposal in response
     @allProposals
-
