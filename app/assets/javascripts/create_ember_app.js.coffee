@@ -1,1 +1,2 @@
-window.TillBeslut = Ember.Application.create()
+window.TillBeslut = Ember.Application.create
+  rootElement: '#app-root'
