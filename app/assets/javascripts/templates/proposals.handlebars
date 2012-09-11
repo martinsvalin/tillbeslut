@@ -1,7 +1,11 @@
 <ul>
-  <li>
-    {{#with TillBeslut.Proposal}}
-    {{view TillBeslut.ProposalView}}
-    {{/with}}
-  </li>
+  {{#if proposals.length}}
+    {{#each proposals}}
+      <li>
+        {{view TillBeslut.ProposalView}}
+      </li>
+    {{/each}}
+  {{else}}
+    <p>Inga motioner</p>
+  {{/if}}
 </ul>

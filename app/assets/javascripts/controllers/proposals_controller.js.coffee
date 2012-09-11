@@ -1,1 +1,2 @@
-TillBeslut.ProposalsController = Ember.Controller.extend()
+TillBeslut.ProposalsController = Ember.ArrayController.extend
+  proposals: TillBeslut.Proposal.allProposals
