@@ -1,10 +1,11 @@
-TillBeslut.Proposal = Ember.Object.create
-  header: 'Eat the rich'
-  number: '1.1'
-  body: 'The rich are fat and juicy. Therefore, I propose:'
-  decision_points: [
-    text: "That we eat the rich!"
-  ]
-  authors: [
-    name: 'Poor Joe Schmoe'
-  ]
+TillBeslut.Proposal = Ember.Object.reopenClass
+  allProposals: []
+  all: ->
+    $.ajax
+      url: "/proposals"
+      context: this
+      success: (response)=>
+        # console.log JSON.stringify({data: response})
+        @allProposals.addObject proposal for proposal in response.proposals
+    @allProposals
+
