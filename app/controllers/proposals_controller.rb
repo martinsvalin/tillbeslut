@@ -1,6 +1,5 @@
 class ProposalsController < ApplicationController
   def index
-    @proposals = Proposal.all
-    render json: @proposals if request.xhr?
+    @proposals = Proposal.all if request.xhr?
   end
 end
