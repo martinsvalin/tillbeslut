@@ -19,6 +19,7 @@ end
 group :development, :test do
   gem 'nokogiri'
   gem "capybara"
+  gem "capybara-webkit"
   gem "rspec-rails"
   gem "factory_girl"
   gem "pry"
